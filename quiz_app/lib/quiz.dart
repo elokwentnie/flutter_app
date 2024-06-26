@@ -21,12 +21,17 @@ class _QuizState extends State<Quiz> {
   // }
 
   var activeScreen = 'start-screen';
+  final List<String> selectedAnswers = [];
 
   void switchScreen() {
     setState(() {
       // activeScreen = 'const QuestionsScreen()';
       activeScreen = 'questions-screen';
     });
+  }
+
+  void chooseAnswer(String answer) {
+    selectedAnswers.add(answer);
   }
 
   @override
