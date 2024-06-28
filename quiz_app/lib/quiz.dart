@@ -35,7 +35,6 @@ class _QuizState extends State<Quiz> {
     selectedAnswers.add(answer);
     if (selectedAnswers.length == questions.length) {
       setState(() {
-        selectedAnswers = [];
         activeScreen = 'results-screen';
       });
     }
@@ -60,6 +59,7 @@ class _QuizState extends State<Quiz> {
         restartQuizFunction: restartQuiz,
         choosenAnswers: selectedAnswers,
       );
+      selectedAnswers = [];
     }
 
     return MaterialApp(
@@ -68,8 +68,8 @@ class _QuizState extends State<Quiz> {
           decoration: const BoxDecoration(
             gradient: LinearGradient(
               colors: [
-                Color.fromARGB(255, 169, 146, 204),
-                Color.fromARGB(255, 169, 146, 204),
+                Color.fromARGB(255, 86, 23, 194),
+                Color.fromARGB(255, 56, 4, 106),
               ],
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
